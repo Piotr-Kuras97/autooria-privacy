@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Autooria — Privacy Policy · v1.5</title>
+  <title>Autooria — Privacy Policy · v1.6</title>
   <link rel="icon" type="image/png" href="../assets/autooria-logo.png">
   <link rel="stylesheet" href="../assets/style.css">
 </head>
@@ -20,7 +20,7 @@
     <article id="policy">
       <header class="document-header">
         <h1>Autooria — Privacy Policy</h1>
-        <p class="metadata">Version 1.5 · Effective <time datetime="2026-10-18">October 18, 2026</time></p>
+        <p class="metadata">Version 1.6 · Effective <time datetime="2026-10-27">October 27, 2026</time></p>
       </header>
       <section aria-labelledby="section-1">
         <h2 id="section-1">1. General information</h2>
@@ -29,7 +29,9 @@
       <section aria-labelledby="section-2">
         <h2 id="section-2">2. Data stored locally</h2>
         <p>Car details, including VIN, registration number and name, fuel, charging, expense, service, mileage and reminder records, amounts and notes are stored in the private app database on your device. Charging records may include energy, costs, date and time, mileage, battery levels, a manually selected location category, a location/operator name, AC/DC charging type and notes. Vehicle appearance settings are stored as local icon and color codes for each car. These are not photos or images downloaded from a server; customization does not require an account. Settings are also stored locally. The dashboard and statistics are calculated on your device. Photos restored from a backup are saved in private app files; a photo referenced outside the app remains with its original provider. Autooria does not provide cloud synchronization of your car history.</p>
+        <p>Documents and Receipts (PDF, TXT, and JPEG, PNG and WebP images), their names, categories, dates and notes are stored locally. Files selected from storage or the gallery, and photos taken through an external camera app, are copied into Autooria’s private storage. The app preserves the original files, including when previewing them. They may contain metadata recorded by their creator or camera, including an earlier location; Autooria does not access GPS location. You can keep Documents and Receipts in the car’s library or attach them to fuel, charging, expense and service records. Files are previewed on the device without being sent to the developer.</p>
         <p>Records remain until you delete them or replace them by importing a backup. You can edit or delete records in the app. Android’s Clear storage or Clear data action removes the app’s local database, settings and private files, including restored photos. Clearing only the cache does not delete your records. Uninstalling Autooria also removes its private local data. Automatic Android backup and system transfer of Autooria app data are disabled. External photo originals and exported files are not removed by these actions; see section 9.</p>
+        <p>Detaching a document from a record does not remove it from the library. Deleting it from the library removes its current record; physical deletion of an unused file may happen later, after reads and recovery operations finish. Working copies used for import, export, the camera and sharing, and records of unfinished operations, may remain locally until completion or a safe cleanup retry. If the state is unresolved, they may be retained longer instead of being deleted automatically. Access to start new reads of a prepared sharing copy expires after 24 hours; an ongoing read may finish later, and the file is removed during subsequent cleanup. We do not guarantee immediate or irreversible physical erasure of all bytes. Copies saved by you or a recipient outside Autooria remain outside the app’s control.</p>
         <p>Private app storage uses Android’s application isolation and access protections. Autooria does not add its own database encryption. Protect access to your device; the protection of files held by external apps or providers depends on their safeguards.</p>
       </section>
       <section aria-labelledby="section-3">
@@ -39,10 +41,13 @@
       <section aria-labelledby="section-4">
         <h2 id="section-4">4. Notifications</h2>
         <p>Reminder notifications use Android’s local scheduling and notification mechanisms. Their availability depends on your system permission and notification settings and on Android/device restrictions. You can manage system notifications from Autooria Settings. Disabling notifications does not prevent you from using the app or managing reminders.</p>
+        <p>On Android 13 and later, displaying notifications requires POST_NOTIFICATIONS permission. The app also declares permissions to handle device restarts (RECEIVE_BOOT_COMPLETED) and briefly keep processing active (WAKE_LOCK), used by local reminder mechanisms. These do not grant access to documents, photos or location.</p>
       </section>
       <section aria-labelledby="section-5">
         <h2 id="section-5">5. External services</h2>
         <p>Opening the contact email passes the address to your email application; Autooria does not send a message or attach your records automatically. For backup and restore, Android’s system file picker lets you choose a file or destination. External applications and providers handle information under their own privacy policies and security measures. Sections 7 and 9 explain email and exported files respectively. These services are not Autooria cloud synchronization.</p>
+        <p>Individual files and photos are selected through Android’s system file or photo picker. To take a photo, Autooria opens an external camera app and gives it access to a destination for that photo only. Autooria itself does not require permission to access the camera, the entire gallery or all device storage. The external app may require its own permissions.</p>
+        <p>Sharing a document opens the system recipient chooser and gives the selected app temporary read-only access to a prepared copy of the original file. “Save a copy” lets you choose a destination through the system file picker. These actions happen at your request. The app or provider you choose may transfer data off the device, including to its own cloud. A recipient may retain its own copy; revoking access or deleting the document in Autooria does not delete that copy.</p>
       </section>
       <section aria-labelledby="section-6">
         <h2 id="section-6">6. Advertising and analytics</h2>
@@ -63,11 +68,11 @@ Email: <a href="mailto:autooria.contact@gmail.com">autooria.contact@gmail.com</a
       </section>
       <section aria-labelledby="section-9">
         <h2 id="section-9">9. Manual backup and restore</h2>
-        <p>Autooria supports manual export and import of .autooria backups. Autooria 1.0.0 exports v1 backups; Autooria 1.0.1 exports v2 and imports v1/v2; Autooria 1.0.2 exports v3 and imports v1/v2/v3. V3 backups preserve each car’s icon and color choices, while importing an older backup in Autooria 1.0.2 restores the default vehicle appearance. Export happens only when you choose to create a backup. You choose the destination or source with Android’s system file picker (Storage Access Framework); the app receives access only to the file you select. You may choose local storage or an external provider shown by Android, such as Google Drive or OneDrive. A provider may store the file outside your device under its own privacy policy and security measures. Autooria does not upload the backup to its own cloud and does not provide automatic cloud synchronization.</p>
-        <p>Deleting records, clearing app data or uninstalling Autooria does not delete exported backups. Delete those files separately in the location or provider you chose; external copies and their deletion remain under your and the provider’s control. A backup also includes recorded amounts. The file may contain VINs, registration numbers, vehicle history, notes, photos and other car details. A .autooria backup (v1, v2 or v3) is not password-encrypted. Keep it in a safe place.</p>
+        <p>Autooria supports manual export and import of .autooria backups. Autooria 1.0.0 exports v1 backups; Autooria 1.0.1 exports v2 and imports v1/v2; Autooria 1.0.2 exports v3 and imports v1/v2/v3. V3 backups preserve each car’s icon and color choices, while importing an older backup in Autooria 1.0.2 restores the default vehicle appearance. Autooria 1.1.0 exports v4 and imports v1/v2/v3/v4. V4 backups also include the Documents and Receipts library, original files, metadata and links to records. V1/v2/v3 backups do not contain this library. After your informed confirmation, import replaces all cars, their history, the Documents and Receipts library and portable settings with data from the selected backup; it does not merge them. Importing an older backup may therefore remove the current document library, which requires additional confirmation. Archives are verified, and import or export may be refused, for example because of corruption, limits or insufficient space. Export happens only when you choose to create a backup. You choose the destination or source with Android’s system file picker (Storage Access Framework); the app receives access only to the file you select. You may choose local storage or an external provider shown by Android, such as Google Drive or OneDrive. A provider may store the file outside your device under its own privacy policy and security measures. Autooria does not upload the backup to its own cloud and does not provide automatic cloud synchronization.</p>
+        <p>Deleting records, clearing app data or uninstalling Autooria does not delete exported backups. Delete those files separately in the location or provider you chose; external copies and their deletion remain under your and the provider’s control. A backup also includes recorded amounts. The file may contain VINs, registration numbers, vehicle history, notes, photos, Documents and Receipts, and other car details. A .autooria backup (v1, v2, v3 or v4) is not password-encrypted. Keep it in a safe place.</p>
       </section>
     </article>
   </main>
-  <footer class="site-footer"><span>Autooria <span class="footer-version">· v1.5</span></span><a href="mailto:autooria.contact@gmail.com">autooria.contact@gmail.com</a></footer>
+  <footer class="site-footer"><span>Autooria <span class="footer-version">· v1.6</span></span><a href="mailto:autooria.contact@gmail.com">autooria.contact@gmail.com</a></footer>
 </body>
 </html>
